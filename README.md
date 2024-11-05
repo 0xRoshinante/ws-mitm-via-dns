@@ -1,7 +1,7 @@
 # ws-mitm-via-dns
 Custom WebSocket istemcileri için DNS tabanlı Proxy Aracı
 
-Bu proje spesifik amaçlar için geliştirilmiş, dahili olarak proxy özniteliği barındırmayan WebSocket istemcileri için DNS tabanlı bir proxy aracı sağlar. WebSocket üzerinden gelen istekleri alır ve bir trigger-server vasıtasıyla belirtilen proxy sunucusu üzerinden gerçek hedefe yönlendirir.
+Bu proje spesifik amaçlar için geliştirilmiş, dahili olarak proxy özniteliği barındırmayan WebSocket istemcileri için DNS tabanlı bir proxy aracı sağlar. WebSocket üzerinden gelen mesajları alır ve bir trigger-server vasıtasıyla belirtilen proxy sunucusu üzerinden gerçek hedefe replike mesajlar iletir.
 
 ## Özellikler
 
