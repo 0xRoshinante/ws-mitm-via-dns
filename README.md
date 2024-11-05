@@ -30,6 +30,10 @@ Bu proje spesifik amaçlar için geliştirilmiş, dahili olarak proxy özniteli�
    openssl genrsa -out mitm-key.pem 2048
    openssl req -new -x509 -key mitm-key.pem -out mitm-cert.pem -days 365
 
+4. Test uygulamanızın websocket bağlantısı kurmaya çalıştığı domaini hosts dosyanızda local IP değerinize eşleyin
+   ```bash
+   [Local IP Örn. 192.168.1.100] uygulamadan-bu-alana-ws-bağlantısı-gerceklesiyor.[hedef].com
+
 ## Kullanım
 
 1. Secure bağlantılar için:
