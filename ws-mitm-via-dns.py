@@ -74,11 +74,11 @@ async def main(port, proxy_host, proxy_port, certfile, keyfile):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Custom WebSocket istemcileri için DNS tabanlı Proxy Aracı")
-    parser.add_argument("--port", type=int, required=True, help="Dinlenecek port numarası")
-    parser.add_argument("--proxy_host", type=str, required=True, help="Proxy sunucu IP adresi Örn. 127.0.0.1")
-    parser.add_argument("--proxy_port", type=int, required=True, help="Proxy sunucu port numarası Örn. 8081")
-    parser.add_argument("--certfile", type=str, help="SSL sertifika dosyası yolu (.pem türünde) Örn. mitm-cert.pem (openssl ile üretebilirsiniz) # sadece şifreli bağlantılarda")
-    parser.add_argument("--keyfile", type=str, help="SSL anahtar dosyası yolu (.pem türünde) Örn. mitm-key.pem # sadece şifreli bağlantılarda")
+    parser.add_argument("--port", type=int, required=True, help="Dinlenecek port numarası")# bu localde trigger-serverı serve edeceğiniz port. Proxy portu değil.
+    parser.add_argument("--proxy_host", type=str, required=True, help="Proxy sunucu IP adresi Örn. 127.0.0.1")#proxy olarak Burp kullanılabilir. WS mesajlarını görüntüleme derdim yok sadece belirli bir tünele route etcem diyosanız chisel, CCProxy filanda olur. Herhangi bir proxy olur ya :)
+    parser.add_argument("--proxy_port", type=int, required=True, help="Proxy sunucu port numarası Örn. 8081")#buda proxynizde dinlediğiniz port. Diğer portla karıştırmayın lütfen. Unutmayın trigger-serverı serve ettiğiniz port ile bu aynı olamaz. proxynizde sonuçta serve ediyor aynı portta edemezler :)
+    parser.add_argument("--certfile", type=str, help="SSL sertifika dosyası yolu (.pem türünde) Örn. mitm-cert.pem (openssl ile üretebilirsiniz) # sadece şifreli bağlantılarda")#bu
+    parser.add_argument("--keyfile", type=str, help="SSL anahtar dosyası yolu (.pem türünde) Örn. mitm-key.pem # sadece şifreli bağlantılarda")#ve bunu hedefiniz sadece wss destekliyorsa girceniz. Yoksa girmiceniz.
     args = parser.parse_args() # argümanları alıyoz klasik
 
     asyncio.run(main(args.port, args.proxy_host, args.proxy_port, args.certfile, args.keyfile)) #marşa basıyoz.
