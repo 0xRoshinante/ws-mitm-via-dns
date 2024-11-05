@@ -73,7 +73,7 @@ async def main(port, proxy_host, proxy_port, certfile, keyfile):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Custom WebSocket istemcileri için DNS tabanlı Proxy Aracı")
+    parser = argparse.ArgumentParser(description="Custom WebSocket istemcileri için DNS tabanlı MITM Aracı")
     parser.add_argument("--port", type=int, required=True, help="Dinlenecek port numarası")# bu localde trigger-serverı serve edeceğiniz port. Proxy portu değil.
     parser.add_argument("--proxy_host", type=str, required=True, help="Proxy sunucu IP adresi Örn. 127.0.0.1")#proxy olarak Burp kullanılabilir. WS mesajlarını görüntüleme derdim yok sadece belirli bir tünele route etcem diyosanız chisel, CCProxy filanda olur. Herhangi bir proxy olur ya :)
     parser.add_argument("--proxy_port", type=int, required=True, help="Proxy sunucu port numarası Örn. 8081")#buda proxynizde dinlediğiniz port. Diğer portla karıştırmayın lütfen. Unutmayın trigger-serverı serve ettiğiniz port ile bu aynı olamaz. proxynizde sonuçta serve ediyor aynı portta edemezler :)
