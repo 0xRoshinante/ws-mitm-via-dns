@@ -38,8 +38,8 @@ Bu proje spesifik amaçlar için geliştirilmiş, dahili olarak proxy özniteli�
 
 1. Secure bağlantılar için:
    ```bash
-   python proxy_tool.py --port PORT_NUMARASI --proxy_host PROXY_IP --proxy_port PROXY_PORT --certfile mitm-cert.pem --keyfile mitm-key.pem
+   python ws-mitm-via-dns.py --port PORT_NUMARASI --proxy_host PROXY_IP --proxy_port PROXY_PORT --certfile mitm-cert.pem --keyfile mitm-key.pem
 
 2. Secure olmayan bağlantılar için:
    ```bash
-    python proxy_tool.py --port TRIGGER_SERVER_PORT_NUMARASI --proxy_host PROXY_IP --proxy_port PROXY_PORT
+    python ws-mitm-via-dns.py --port TRIGGER_SERVER_PORT_NUMARASI --proxy_host PROXY_IP --proxy_port PROXY_PORT
