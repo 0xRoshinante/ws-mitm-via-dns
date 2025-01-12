@@ -32,7 +32,7 @@ Bu proje spesifik amaçlar için geliştirilmiş, dahili olarak proxy özniteli�
 
 4. Test uygulamanızın websocket bağlantısı kurmaya çalıştığı domaini hosts dosyanızda local IP değerinize eşleyin
    ```bash
-   [Local IP Örn. 192.168.1.100] uygulamadan-bu-alana-ws-bağlantısı-gerceklesiyor.[hedef].com
+   [Local IP Örn. 192.168.1.100] [hedef domain]
 
 ## Kullanım
 
